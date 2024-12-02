@@ -20,3 +20,18 @@ const LazpDeviceInfo = NativeModules.LazpDeviceInfo
 export function multiply(a: number, b: number): Promise<number> {
   return LazpDeviceInfo.multiply(a, b);
 }
+
+const DeviceInfoModule = NativeModules.DeviceInfoModule;
+export const getDeviceInfo = async (): Promise<{
+  brand: string;
+  model: string;
+  osVersion: string;
+  name?: string;
+  sdkVersion?: string;
+}> => {
+  return await DeviceInfoModule.getDeviceInfo();
+};
+
+export const getTest = async () => {
+  return await DeviceInfoModule.getTest();
+};

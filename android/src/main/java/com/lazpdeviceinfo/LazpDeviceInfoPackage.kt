@@ -8,7 +8,10 @@ import com.facebook.react.uimanager.ViewManager
 
 class LazpDeviceInfoPackage : ReactPackage {
   override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(LazpDeviceInfoModule(reactContext))
+    return listOf(
+      LazpDeviceInfoModule(reactContext),
+      DeviceInfoModule(reactContext)
+      )
   }
 
   override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {

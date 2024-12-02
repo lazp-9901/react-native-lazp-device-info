@@ -1,4 +1,5 @@
 package lazpdeviceinfo.example
+import com.lazpdeviceinfo.LazpDeviceInfoPackage
 
 import android.app.Application
 import com.facebook.react.PackageList
@@ -20,6 +21,7 @@ class MainApplication : Application(), ReactApplication {
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
+              add(LazpDeviceInfoPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
